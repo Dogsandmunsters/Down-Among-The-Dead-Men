@@ -5631,6 +5631,10 @@
             saveGame();
             displaySection(currentSection);
             runSectionLogic(currentSection, 0);
+        } else if (varIndex === undefined) {
+            alert('This item is not available.');
+        } else {
+            alert('You cannot afford that. You need ' + price + ' doubloons.');
         }
     }
     
@@ -5717,7 +5721,9 @@
     }
     
     function useHealingPotion() {
-        if (vars[life_points] === 0) {
+        if (vars[healing_potion] <= 0) {
+            alert("You don't have a healing potion!");
+        } else if (vars[life_points] === 0) {
             alert("You can't drink when you're dead!");
         } else if (vars[life_points] >= vars[life_points_max]) {
             alert("You are at full strength. Save the potion for later.");
