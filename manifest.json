@@ -2,7 +2,7 @@
   "name": "Down Among The Dead Men",
   "short_name": "Dead Men",
   "description": "An interactive pirate gamebook adventure",
-  "start_url": "./index.html",
+  "start_url": "./",
   "display": "standalone",
   "background_color": "#1a1a2e",
   "theme_color": "#1a1a2e",
