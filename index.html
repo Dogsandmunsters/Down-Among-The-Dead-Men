@@ -255,6 +255,7 @@
             text-shadow: 0 0 20px var(--accent-red);
         }
         .game-over-subtext { color: var(--text-secondary); margin-bottom: 30px; }
+        .game-over-hint { color: var(--text-secondary); font-size: 0.85em; margin-top: 30px; opacity: 0.7; }
         
         /* Startup Screen */
         .startup-screen {
@@ -509,10 +510,11 @@
         </div>
     </div>
     
-    <div class="game-over" id="game-over">
+    <div class="game-over" id="game-over" onclick="if (event.target === this) closeModal('game-over')">
         <div class="game-over-text">YOU HAVE DIED</div>
         <div class="game-over-subtext">Your adventure has come to an end...</div>
         <button class="header-btn" onclick="resetGame()">Try Again</button>
+        <div class="game-over-hint">Tap outside to read your final page</div>
     </div>
     
     <script>
@@ -1314,9 +1316,9 @@
   "sect_425": "\nAs it turns out, the sun has melted small pools on the iceberg's surface, saving you the effort of chipping blocks of ice to get water. The taste is slightly brackish, but it seems otherwise drinkable. You fill your bellies before heading back to the jollyboat and casting off.<br><span class=\"indent\"></span>You head west, watching the sun slide down the sky. Then Blutz gives an excited shout and points astern. You all turn, rubbing your eyes when you see a fleck of gold against the indigo eastern sky. To your disbelief and delight, the fleck grows until you can clearly see that it is the topsails of a brigantine bearing directly for you.<br><span class=\"indent\"></span>Leaping to your feet, you wave and stamp and shout until you see the faces of sailors appear at the rail. They drop sail, steering towards you. 'Ahoy there,' you hear a voice call as the brigantine draws level with your boat, 'we'll throw down a rope.' 'Why, this is a glad day!' says Oakley as you climb up to the deck. 'First a good drink of water, and now a ride home into the bargain!' <br><span data-piece=\"425_0\" class=\"choice\"><a data-goto=\"sect_370\">Continue.</a></span>\n",
   "sect_426": "\nThe second of the four islands comes in sight: a verdant jungle-clad shoreline dominated by the immense hump of a smouldering volcano. High up on the volcano's slopes you can see the dull red gleam of lava. Grey sulphurous smoke sits in a wreath around the cone.<br><span class=\"indent\"></span>'We'd be foolhardly to put ashore here,' maintains Blutz. 'That volcano could erupt and bury us all!'<br><span data-piece=\"426_0\" class=\"choice\"><a data-goto=\"sect_193\">Reassure him.</a></span><span data-piece=\"426_1\" class=\"choice\"><a data-goto=\"sect_174\">Put in at the island.</a></span><span data-piece=\"426_2\" class=\"choice\"><a data-goto=\"sect_135\">Continue sailing west.</a></span>\n",
   "sect_427": "\n\n",
-  "sect_427a": "\nYou are taken to Queen Titania's cabin in the aft gallery of the <em>Rose</em>. You are amazed at the sight of such luxury aboard a ship: there is a thick carpet, velvet drapes and even a gilded throne.<br><span class=\"indent\"></span>The Queen is younger than you expected, slim as a colt and palely pretty, with hair of autumn flame. But there is the ring of purebred royalty in her voice as she greets you. 'You have saved us from a fate that does not bear contemplation,' she says. 'You have our thanks - and not only thanks, but also material reward. Such a valiant mariner should not live a pirate's cruel life. Will you accept a title and a grant of land in Glorianne?'<br><span class=\"indent\"></span>'And there's a commission in the navy waiting for you, too, if you want it,' puts in Admiral Calidor. He turns and bows to the Queen with his hand to his chest. 'Your pardon, Majesty.'<br><span class=\"indent\"></span>'Not at all, Calidor.' The Queen smiles - a vivacious radiant smile, quite at odds with the stuffy panoply of courtly etiquette that surrounds her. Turning back to you, she adds: 'Our esteemed admiral is quite right. You would make a welcome addition to our navy. Well?'<br><span class=\"indent\"></span>You are momentarily lost in a private reverie. The offer is tempting, but you have got used to a life of exhilarating adventure. There was your run-in with El Draque. You may not have seen the last of him. Did you make other enemies along the way? And are there mysteries still for you to explore on the Carab Sea?<br><span class=\"indent\"></span>You look up at Queen Titania. She is waiting for your answer. Pirate, privateer or captain in the navy? It's up to you.<br><div class=\"s3\"><a href=\"facebooklink\">- THE END -</a></div>\n",
-  "sect_427b": "\nYou are taken to Queen Titania's cabin in the aft gallery of the <em>Rose</em>. You are amazed at the sight of such luxury aboard a ship: there is a thick carpet, velvet drapes and even a gilded throne.<br><span class=\"indent\"></span>The Queen is younger than you expected, slim as a colt and palely pretty, with hair of autumn flame. But there is the ring of purebred royalty in her voice as she greets you. 'You have saved us from a fate that does not bear contemplation,' she says. 'You have our thanks - and not only thanks, but also material reward. Such a valiant mariner should not live a pirate's cruel life. Will you accept a title and a grant of land in Glorianne?'<br><span class=\"indent\"></span>'And there's a commission in the navy waiting for you, too, if you want it,' puts in Admiral Calidor. He turns and bows to the Queen with his hand to his chest. 'Your pardon, Majesty.'<br><span class=\"indent\"></span>'Not at all, Calidor.' The Queen smiles - a vivacious radiant smile, quite at odds with the stuffy panoply of courtly etiquette that surrounds her. Turning back to you, she adds: 'Our esteemed admiral is quite right. You would make a welcome addition to our navy. Well?'<br><span class=\"indent\"></span>You are momentarily lost in a private reverie. The offer is tempting, but you have got used to a life of exhilarating adventure. How many enemies have you made along the way? And are there mysteries still for you to explore on the Carab Sea?<br><span class=\"indent\"></span>You look up at Queen Titania. She is waiting for your answer. Pirate, privateer or captain in the navy? It's up to you.<br><div class=\"s3\"><a href=\"facebooklink\">- THE END -</a></div>\n",
-  "sect_428": "\nTEST MENU - 04-04-13<br>For test purposes, you start with a healing potion and a diamond.<br><span data-piece=\"428_0\" class=\"choice\" data-shop=\"99\">Add 200 doubloons</span><span data-piece=\"428_1\" class=\"choice\"><a data-goto=\"sect_1\">Start on page 1</a></span><span data-piece=\"428_2\" class=\"choice\"><a data-goto=\"sect_12\">Start on shop page 12</a></span><span data-piece=\"428_3\" class=\"choice\"><a data-goto=\"sect_393\">Start on shop page 393</a></span><span data-piece=\"428_4\" class=\"choice\"><a data-goto=\"sect_410\">Start on shop page 410</a></span><span data-piece=\"428_5\" class=\"choice\"><a data-goto=\"sect_427b\">Start on last page a 427b</a></span><span data-piece=\"428_6\" class=\"choice\"><a data-goto=\"sect_427c\">Start on last page b 427c</a></span>\n\r\n\r\n"
+  "sect_427a": "\nYou are taken to Queen Titania's cabin in the aft gallery of the <em>Rose</em>. You are amazed at the sight of such luxury aboard a ship: there is a thick carpet, velvet drapes and even a gilded throne.<br><span class=\"indent\"></span>The Queen is younger than you expected, slim as a colt and palely pretty, with hair of autumn flame. But there is the ring of purebred royalty in her voice as she greets you. 'You have saved us from a fate that does not bear contemplation,' she says. 'You have our thanks - and not only thanks, but also material reward. Such a valiant mariner should not live a pirate's cruel life. Will you accept a title and a grant of land in Glorianne?'<br><span class=\"indent\"></span>'And there's a commission in the navy waiting for you, too, if you want it,' puts in Admiral Calidor. He turns and bows to the Queen with his hand to his chest. 'Your pardon, Majesty.'<br><span class=\"indent\"></span>'Not at all, Calidor.' The Queen smiles - a vivacious radiant smile, quite at odds with the stuffy panoply of courtly etiquette that surrounds her. Turning back to you, she adds: 'Our esteemed admiral is quite right. You would make a welcome addition to our navy. Well?'<br><span class=\"indent\"></span>You are momentarily lost in a private reverie. The offer is tempting, but you have got used to a life of exhilarating adventure. There was your run-in with El Draque. You may not have seen the last of him. Did you make other enemies along the way? And are there mysteries still for you to explore on the Carab Sea?<br><span class=\"indent\"></span>You look up at Queen Titania. She is waiting for your answer. Pirate, privateer or captain in the navy? It's up to you.<br><div class=\"s3\">- THE END -</div>\n",
+  "sect_427b": "\nYou are taken to Queen Titania's cabin in the aft gallery of the <em>Rose</em>. You are amazed at the sight of such luxury aboard a ship: there is a thick carpet, velvet drapes and even a gilded throne.<br><span class=\"indent\"></span>The Queen is younger than you expected, slim as a colt and palely pretty, with hair of autumn flame. But there is the ring of purebred royalty in her voice as she greets you. 'You have saved us from a fate that does not bear contemplation,' she says. 'You have our thanks - and not only thanks, but also material reward. Such a valiant mariner should not live a pirate's cruel life. Will you accept a title and a grant of land in Glorianne?'<br><span class=\"indent\"></span>'And there's a commission in the navy waiting for you, too, if you want it,' puts in Admiral Calidor. He turns and bows to the Queen with his hand to his chest. 'Your pardon, Majesty.'<br><span class=\"indent\"></span>'Not at all, Calidor.' The Queen smiles - a vivacious radiant smile, quite at odds with the stuffy panoply of courtly etiquette that surrounds her. Turning back to you, she adds: 'Our esteemed admiral is quite right. You would make a welcome addition to our navy. Well?'<br><span class=\"indent\"></span>You are momentarily lost in a private reverie. The offer is tempting, but you have got used to a life of exhilarating adventure. How many enemies have you made along the way? And are there mysteries still for you to explore on the Carab Sea?<br><span class=\"indent\"></span>You look up at Queen Titania. She is waiting for your answer. Pirate, privateer or captain in the navy? It's up to you.<br><div class=\"s3\">- THE END -</div>\n",
+  "sect_428": "\nTEST MENU - 04-04-13<br>For test purposes, you start with a healing potion and a diamond.<br><span data-piece=\"428_0\" class=\"choice\" data-shop=\"99\">Add 200 doubloons</span><span data-piece=\"428_1\" class=\"choice\"><a data-goto=\"sect_1\">Start on page 1</a></span><span data-piece=\"428_2\" class=\"choice\"><a data-goto=\"sect_12\">Start on shop page 12</a></span><span data-piece=\"428_3\" class=\"choice\"><a data-goto=\"sect_393\">Start on shop page 393</a></span><span data-piece=\"428_4\" class=\"choice\"><a data-goto=\"sect_410\">Start on shop page 410</a></span><span data-piece=\"428_5\" class=\"choice\"><a data-goto=\"sect_427a\">Start on last page a 427a</a></span><span data-piece=\"428_6\" class=\"choice\"><a data-goto=\"sect_427b\">Start on last page b 427b</a></span>\n\r\n\r\n"
 };
     
     // Variable names
@@ -1556,13 +1558,22 @@
             runSectionLogic(nextSect, 1);
         }
         
+        checkForDeath();
         updateDisplay();
         saveGame();
-        
-        // Check for death
-        if (vars[life_points] <= 0 && vars[char_chosen] === 1) {
-            showGameOver();
-        }
+    }
+    
+    // A section is a death ending if it is marked with the demise illustration.
+    function isDeathSection(sectId) {
+        return SECTION_END_ILLUSTRATIONS[sectId] === 'filler_demise.jpg';
+    }
+    
+    function checkForDeath() {
+        if (vars[char_chosen] !== 1) return;
+        // Narrative deaths ("THE END" pages) do not always reduce Life Points to zero,
+        // so treat landing on one the same as running out of Life Points.
+        if (isDeathSection(currentSection)) vars[life_points] = 0;
+        if (vars[life_points] <= 0) showGameOver();
     }
     
     function displaySection(sectId) {
@@ -4740,7 +4751,7 @@
             }
             else
             {
-            auto="351d";
+            auto="331d";
             }
             }
             }
@@ -5772,12 +5783,21 @@
         if (save) {
             try {
                 const data = JSON.parse(save);
+                if (!data || !Array.isArray(data.vars) || !SECTIONS[data.section]) {
+                    throw new Error('Save data is incomplete');
+                }
                 vars = data.vars;
                 jollyboatUnlocked = data.jollyboatUnlocked || false;
                 if (jollyboatUnlocked) {
                     document.getElementById('jollyboat-btn').classList.remove('hidden');
                 }
-                changeSection(data.section);
+                // Re-render the saved section with i=0 so that one-time entry effects
+                // (life changes, provisions used, items gained/lost) are not applied again.
+                auto = '';
+                displaySection(data.section);
+                runSectionLogic(data.section, 0);
+                checkForDeath();
+                updateDisplay();
                 return true;
             } catch (e) { console.error('Load failed:', e); }
         }
@@ -5814,7 +5834,12 @@
     function resumeGame() {
         if (hasSavedGame()) {
             hideStartupScreen();
-            loadGame();
+            if (!loadGame()) {
+                alert('Your saved game could not be loaded, so a new game will start.');
+                localStorage.removeItem('deadmen_save');
+                initVars();
+                changeSection('sect_1');
+            }
         }
     }
     
