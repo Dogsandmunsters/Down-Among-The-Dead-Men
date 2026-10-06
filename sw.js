@@ -1,4 +1,4 @@
-const CACHE_NAME = 'deadmen-v2';
+const CACHE_NAME = 'deadmen-v3';
 const urlsToCache = [
   './',
   './index.html',
@@ -59,8 +59,31 @@ self.addEventListener('activate', e => {
   );
 });
 
-// Fetch: cache-first, falling back to network (and cache new responses)
+// Returns true for requests for the page itself (navigations / index.html)
+function isPageRequest(request) {
+  if (request.mode === 'navigate') return true;
+  const path = new URL(request.url).pathname;
+  return path.endsWith('/') || path.endsWith('/index.html');
+}
+
+// Fetch: network-first for the page itself (so updates reach installed users),
+// cache-first for everything else, falling back to network (and cache new responses)
 self.addEventListener('fetch', e => {
+  if (e.request.method !== 'GET') return;
+
+  if (isPageRequest(e.request)) {
+    e.respondWith(
+      fetch(e.request).then(response => {
+        if (response && response.status === 200) {
+          const responseToCache = response.clone();
+          caches.open(CACHE_NAME).then(cache => cache.put(e.request, responseToCache));
+        }
+        return response;
+      }).catch(() => caches.match(e.request).then(cached => cached || caches.match('./index.html')))
+    );
+    return;
+  }
+
   e.respondWith(
     caches.match(e.request).then(cached => {
       if (cached) return cached;
